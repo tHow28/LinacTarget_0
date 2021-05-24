@@ -62,8 +62,14 @@ int main(int argc,char** argv)
   //
 #ifdef G4MULTITHREADED
   G4MTRunManager* runManager = new G4MTRunManager;
+    //add scoring manager to the example
+  G4ScoringManager* scoringManager =
+      G4ScoringManager::GetScoringManager();
 #else
   G4RunManager* runManager = new G4RunManager;
+    //add scoring manager to the example
+  G4ScoringManager* scoringManager =
+      G4ScoringManager::GetScoringManager();
 #endif
 
   // Set mandatory initialization classes
